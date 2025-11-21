@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDV</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="menu" class="bg-[#F7F4F4] h-[52px] sm:h-[84px] py-[17px] relative">
+      <div
+        class="flex items-center justify-between max-w-[1240px] px-[10px] sm:px-[20px] mx-auto w-full h-full"
+      >
+        <a class="text-[22px] sm:text-[36px] font-bold mr-[40px]" href="#">Logo</a>
+
+        <div class="hidden sm:block">
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <span class="menu-icon">
+                <img src="./assets/dd.svg" alt="catalog" />
+              </span>
+              КАТАЛОГ
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Стулья</a></li>
+              <li><a href="#">Кресла</a></li>
+              <li><a href="#">Мягкая мебель</a></li>
+              <li><a href="#">Столы</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mx-auto hidden lg:block">
+          <ul class="flex text-[14px] font-[500] mx-[41px]">
+            <li class="mr-[21px] ml-[0px]"><a href="#">Индивидуальное производство</a></li>
+            <li class="mx-4 lg:mx-[21px]"><a href="#">Портфолио</a></li>
+            <li class="mx-4 lg:mx-[21px]"><a href="#">О компании</a></li>
+            <li class="ml-[21px] mr-[0px]"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="sm:flex flex-col text-[14px] hidden">
+          <div class="flex lg:mr-[10px]">
+            <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+          <div class="flex mt-[10px]">
+            <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+        </div>
+
+        <div class="sm:flex mb-auto hidden">
+          <a href="#" class="mr-[5px]">
+            <img src="./assets/viber.svg" alt="viber" />
+          </a>
+          <a href="#" class="mr-[5px]">
+            <img src="./assets/telegram.svg" alt="telegram" />
+          </a>
+          <a href="#">
+            <img src="./assets/whatsap.svg" alt="whatsapp" />
+          </a>
+        </div>
+        <!--  -->
+        <!-- Кнопка открытия -->
+        <div id="phone" class="sm:hidden block ml-auto mr-[16px] cursor-pointer">
+          <img src="./assets/phone-alt.svg" alt="phone" />
+        </div>
+
+        <!-- Меню контактов -->
+        <div
+          id="contactMenu"
+          class="hidden absolute top-full left-0 right-0 z-50 bg-white shadow-lg border border-gray-200 py-[44px]"
+        >
+          <div
+            class="max-w-[1240px] mx-auto px-[20px] py-4 flex flex-col items-center justify-center"
+          >
+            <div class="mb-4">
+              <a href="tel:+375447602900" class="text-lg font-semibold block">+375(44) 760 29 00</a>
+              <div class="flex gap-2 mt-2 justify-center">
+                <a href="#"><img src="./assets/viber.svg" alt="Viber" class="w-6 h-6" /></a>
+                <a href="#"><img src="./assets/telegram.svg" alt="Telegram" class="w-6 h-6" /></a>
+                <a href="#"><img src="./assets/whatsap.svg" alt="WhatsApp" class="w-6 h-6" /></a>
+              </div>
+            </div>
+            <div>
+              <a href="tel:+375297602900" class="text-lg font-semibold block">+375(29) 760 29 00</a>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- Кнопка бургер -->
+        <div id="burger" class="sm:hidden block cursor-pointer">
+          <img id="burgerIcon" src="./assets/burger.svg" alt="menu" class="w-[36px]" />
+          <img id="closeIcon" src="./assets/close.svg" alt="close" class="w-[36px] hidden" />
+        </div>
+
+        <!-- Меню бургер -->
+        <div
+          id="burgerMenu"
+          class="hidden absolute top-full left-0 right-0 z-50 bg-white shadow-lg border border-gray-200"
+        >
+          <div class="max-w-[1240px] mx-auto px-[20px] py-4">
+            <nav
+              class="flex flex-col justify-center items-center gap-4 text-lg font-medium py-[44px] text-center"
+            >
+              <a href="#">Каталог</a>
+              <a href="#">Индивидуальное производство</a>
+              <a href="#">Портфолио</a>
+              <a href="#">О компании</a>
+              <a href="#">Контакты</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      id="catalog"
+      class="max-w-[1200px] bg-[#FEFDFC] mt-[12px] px-2 sm:mt-[24px] mx-auto text-[#2E332F] transition duration-300"
+    >
+      <div class="text-[#656565] text-[14px]">
+        <a href="/">Главная</a> >> <a href="#">Каталог</a>
+      </div>
+      <h1
+        class="sm:text-[36px]/10 text-[23px] font-bold text-center my-4 sm:mt-[56px] sm:mb-[32px]"
+      >
+        Каталог
+      </h1>
+      <section
+        class="grid gap-[8px] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-4"
+      >
+        <!-- Card1 -->
+        <a
+          href="#"
+          class="bg-[#FCF7F3] w-auto hover:bg-gray-200 rounded-[10px] shadow-sm overflow-hidden sm:h-[282px] sm:w-[282px] flex flex-col justify-end"
+        >
+          <img src="./assets/chair.png" alt="Товар 1" class="w-full object-cover" />
+          <div class="p-2">
+            <h2 class="text-[18px] text-[#2E332F] text-center font-medium">Стулья</h2>
+          </div>
+        </a>
+
+        <!-- Card2 -->
+        <a
+          href="#"
+          class="bg-[#FCF7F3] w-auto hover:bg-gray-200 rounded-[10px] shadow-sm overflow-hidden sm:h-[282px] sm:w-[282px] flex flex-col justify-end"
+        >
+          <img src="./assets/armchair.png" alt="Товар 1" class="w-full object-cover" />
+          <div class="p-2">
+            <h2 class="text-[18px] text-[#2E332F] text-center font-medium">Кресла</h2>
+          </div>
+        </a>
+
+        <!-- Card3 -->
+        <a
+          href="#"
+          class="bg-[#FCF7F3] w-auto hover:bg-gray-200 rounded-[10px] shadow-sm overflow-hidden sm:h-[282px] sm:w-[282px] flex flex-col justify-end"
+        >
+          <img src="./assets/sofa.png" alt="Товар 1" class="w-full object-cover" />
+          <div class="p-2">
+            <h2 class="text-[18px] text-[#2E332F] text-center font-medium">Мягкая мебель</h2>
+          </div>
+        </a>
+
+        <!-- Card4 -->
+        <a
+          href="#"
+          class="bg-[#FCF7F3] w-auto hover:bg-gray-200 rounded-[10px] shadow-sm overflow-hidden sm:h-[282px] sm:w-[282px] flex flex-col justify-end"
+        >
+          <img src="./assets/table.png" alt="Товар 1" class="w-full object-cover" />
+          <div class="p-2">
+            <h2 class="text-[18px] text-[#2E332F] text-center font-medium">Столы</h2>
+          </div>
+        </a>
+
+        <!-- Card5 -->
+        <a
+          href="#"
+          class="bg-[#FCF7F3] w-auto hover:bg-gray-200 rounded-[10px] shadow-sm overflow-hidden sm:h-[282px] sm:w-[282px] flex flex-col justify-end"
+        >
+          <img src="./assets/bench.png" alt="Товар 1" class="w-full object-cover" />
+          <div class="p-2">
+            <h2 class="text-[18px] text-[#2E332F] text-center font-medium">Скамейки / Банкетки</h2>
+          </div>
+        </a>
+
+        <!-- Card6 -->
+        <a
+          href="#"
+          class="bg-[#FCF7F3] w-auto hover:bg-gray-200 rounded-[10px] shadow-sm overflow-hidden sm:h-[282px] sm:w-[282px] flex flex-col justify-end"
+        >
+          <img src="./assets/section.png" alt="Товар 1" class="w-full object-cover" />
+          <div class="p-2">
+            <h2 class="text-[18px] text-[#2E332F] text-center font-medium">Многоместные секции</h2>
+          </div>
+        </a>
+      </section>
+      <section
+        class="max-w-[1260px] sm:px-[10px] mx-auto sm:my-[112px] sm:pr-[0px] relative mt-[56px] sm:mt-[112px]"
+      >
+        <p class="sm:mb-4 mb-2 text-[14px]">
+          Фабрика мебели «БДВ Торг» много лет успешно работает на рынке Беларуси, предлагая
+          комплексные решения для обустройства жилых и коммерческих помещений. Мы специализируемся
+          на производстве корпусной мебели на заказ по индивидуальным размерам и эскизам, что
+          позволяет нашим клиентам максимально эффективно использовать пространство. Наш приоритет —
+          это качественная и доступная мебель от производителя, что достигается за счет собственного
+          современного производства на территории Беларуси и отлаженной логистики.<br />
+        </p>
+        <p class="txt3 hidden sm:block text-[14px]">
+          Мы разрабатываем и производим стильные и функциональные шкафы-купе, кухонные гарнитуры,
+          гардеробные комнаты, а также мебель для гостиных, спален и офисов. Вы можете заказать
+          мебель в любом стиле — от классики до современного модерна. Наше предложение включает и
+          изготовление офисной мебели для руководителя и персонала, а также обустройство
+          коммерческих пространств. Мы понимаем требования к эргономике и создаем продукты,
+          повышающие комфорт и эффективность. «БДВ Торг» является надежным поставщиком для
+          юридических лиц и государственных учреждений Республики Беларусь. Мы предлагаем
+          специальные условия для оптовых заказов и предоставляем полный пакет документов, включая
+          готовые технические описания для формирования тендерной документации, что значительно
+          упрощает процедуру закупки мебели для госнужд.<br />
+          Наши преимущества — это прямые цены от производителя, индивидуальный подход, широкий выбор
+          материалов и фурнитуры, собственное производство с жестким контролем качества, а также
+          оперативные сроки изготовления. Мы осуществляем доставку мебели по всей территории
+          Беларуси. Если вы ищете, где недорого купить качественную мебель в Минске или любом другом
+          городе страны, которая прослужит долгие годы, — вы обратились по адресу. Фабрика «БДВ
+          Торг» — это проверенный производитель, где вы можете заказать изготовление мебели для
+          любых целей, получив персональный подход, выгодные условия и гарантированное качество.
+          Наша миссия — создавать комфортную и функциональную среду для жизни и работы белорусов.
+        </p>
+        <p
+          id="more2"
+          href="#"
+          class="text-[14px] mb-[56px] sm:mb-0 sm:hidden underline text-[#1D77EE]"
+        >
+          Показать больше
+        </p>
+        <div class="flex w-[56px] absolute bottom-4 sm:bottom-[50px] right-0 sm:right-[-50px]">
+          <div
+            class="flex items-center justify-center mx-auto w-[56px] h-[56px] border-1 border-[#D5D8D9] rounded-[100px]"
+          >
+            <a href="#menu">
+              <img src="./assets/arraow-up.svg" alt="up" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#dbd8d6] min-h-[320px] px-[10px] md:px-[20px]">
+      <div class="flex flex-col md:flex-row max-w-[1240px] mx-auto pt-[44px] justify-between">
+        <div class="flex flex-col mb-[34px] max-w-[252px]">
+          <a class="text-[36px] font-bold mr-[40px] mb-2 md:mb-[20px]" href="#">Logo</a>
+          <p class="text-[14px] font-[100]">
+            Актуальные действующие цены<br />
+            и наличие товара уточняйте<br />
+            у Вашего менеджера
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-[18px] font-bold mb-[20px]">Меню</h3>
+          <div class="flex">
+            <div class="flex-col">
+              <div class="flex justify-between text-[14px] text-[#2E332F]">
+                <div class="flex flex-col max-w-[120px] sm:max-w-full mb-[32px]">
+                  <a class="mb-[16px]" href="#">Индивидуальное производство</a>
+                  <a href="#">Портфолио</a>
+                </div>
+                <div class="flex flex-col ml-[80px] lg:ml-[60px]">
+                  <a class="mb-[38px] sm:mb-[16px]" href="#">О компании</a>
+                  <a href="#">Контакты</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-[18px] font-bold mb-[20px]">Как с нами связаться</h3>
+          <div class="flex text-[14px]">
+            <img class="mr-[10px] mb-[10px]" src="./assets//phone.svg" alt="phone" />
+            <a class="mr-[10px]" href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+            <a class="mr-[10px]" href="#"><img src="./assets/viber.svg" alt="viber" /></a>
+            <a class="mr-[10px]" href="#"><img src="./assets/telegram.svg" alt="telegram" /></a>
+            <a href=""><img src="./assets/whatsap.svg" alt="whatsapp" /></a>
+          </div>
+          <div class="flex text-[14px]">
+            <img class="mr-[10px] mb-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+          <div class="flex text-[14px]">
+            <img class="mr-[10px]" src="./assets/mail.svg" alt="mail" />
+            <a href="mail:fabrikant-by@mail.ru">fabrikant-by@mail.ru</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex max-w-[1240px] mx-auto border-b-1 border-[#C4C4C4] pb-5 sm:pb-2 mt-[32px] sm:mt-0"
+      >
+        <p class="flex max-w-[735px] mr-auto text-[12px] text-[#5E5E5E]">
+          Данный сайт не является интернет-магазином и не осуществляет продажу товара физическим
+          лицам за наличный расчет. Товары и цены указаны для ознакомления, приобретение товара
+          осуществляется на основании выставленного счета-фактуры по безналичному расчету.
+        </p>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row pb-[32px] justify-between text-[12px] text-[#5E5E5E] max-w-[1240px] mx-auto pt-2"
+      >
+        <a href="#">Политика обработки персональных данных</a>
+        <a href="#">Политика обработки файлов cookie</a>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

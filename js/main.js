@@ -13,9 +13,10 @@ const nextBtn2 = document.getElementById('next2');
 const cardWidth = 282;
 let position = 0;
 
-const maxScroll = slider.scrollWidth - 1200;
+if (slider) {
+	const maxScroll = slider.scrollWidth - 1200;
 
-function updateSlider() {
+	function updateSlider() {
   slider.style.transform = `translateX(-${position}px)`;
   prevBtn.classList.toggle('hidden', position === 0);
 }
@@ -44,7 +45,7 @@ prevBtn2.addEventListener('click', () => {
   position = Math.max(position - cardWidth, 0);
   updateSlider2();
 });
-
+}
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -130,5 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	moreLink.addEventListener('click', (e) => {
   hiddenTxt1.classList.remove('hidden');
   hiddenTxt2.classList.remove('hidden');
+	});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const moreLink2 = document.getElementById('more2');
+	const hiddenTxt3 = document.querySelector('.txt3');
+
+	moreLink2.addEventListener('click', (e) => {
+  hiddenTxt3.classList.remove('hidden');
 	});
 });
