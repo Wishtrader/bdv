@@ -10,11 +10,6 @@
       rel="stylesheet"
     />
     <link href="./css/styles.css" rel="stylesheet" />
-    <style>
-      body {
-        background-color: #f7f4f4;
-      }
-    </style>
   </head>
   <body class="text-[#656565] text-[16px] font-['Open_Sans'] flex flex-col min-h-screen">
     <header id="menu" class="bg-[#F7F4F4] h-[52px] sm:h-[84px] py-[17px] relative">
@@ -127,20 +122,18 @@
       </div>
     </header>
 
-    <main class="flex-grow flex items-center justify-center px-[20px] py-[40px]">
+    <main class="flex-grow flex items-center justify-center px-[20px] py-[40px] sm:py-[96px]">
       <div class="text-center max-w-[600px]">
-        <h1 class="text-[120px] sm:text-[180px] font-bold text-[#1D77EE] leading-none mb-[10px]">
-          404
-        </h1>
-        <h2 class="text-[24px] sm:text-[32px] font-bold text-[#2E332F] mb-[20px]">
+        <img class="mb-6 mx-auto" src="./assets/404.svg" alt="404">
+        <h2 class="text-[24px] sm:text-[36px] font-bold text-[#2E332F] mb-6">
           Страница не найдена
         </h2>
-        <p class="text-[16px] text-[#656565] mb-[40px]">
+        <p class="text-[16px] text-[#2E332F] mb-[24px] sm:mb-[32px]">
           Неправильно введен адрес или такой страницы не существует
         </p>
         <a
           href="index.html"
-          class="inline-block bg-linear-to-br from-[#5DB8F5] to-[#1D77EE] text-white font-bold uppercase py-[15px] px-[60px] rounded-[8px] hover:opacity-90 transition shadow-[0_4px_10px_rgba(29,119,238,0.3)]"
+          class="inline-block bg-linear-to-br from-[#5DB8F5] to-[#1D77EE] text-white font-bold uppercase py-[14px] px-[85px] rounded-[8px] hover:opacity-90 transition shadow-[0_4px_10px_rgba(29,119,238,0.3)]"
         >
           НА ГЛАВНУЮ
         </a>
@@ -209,15 +202,6 @@
         <a href="policy-cookie.html">Политика обработки файлов cookie</a>
       </div>
     </footer>
-
-    <div class="fixed bottom-2 right-2 sm:relative sm:w-full sm:mb-[80px] hidden sm:block">
-      <div
-        class="flex items-center justify-center mx-auto w-[56px] h-[56px] border-1 border-[#D5D8D9] rounded-[100px] cursor-pointer"
-        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-      >
-        <img src="./assets/arraow-up.svg" alt="up" />
-      </div>
-    </div>
 
     <script src="./js/main.js"></script>
   </body>
