@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Самба - BDV</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f7f4f4; /* Match header bg or use white? Mockup looks like white card on light gray */
+      }
+    </style>
+  </head>
+  <body class="text-[#656565] text-[16px]">
+    <header id="menu" class="bg-[#F7F4F4] h-[52px] sm:h-[84px] py-[17px] relative">
+      <div
+        class="flex items-center justify-between max-w-[1240px] px-[10px] sm:px-[20px] mx-auto w-full h-full"
+      >
+        <a class="text-[22px] sm:text-[36px] font-bold mr-[40px] text-[#2E332F]" href="index.html">Logo</a>
+
+        <div class="hidden sm:block">
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <span class="menu-icon">
+                <img src="./assets/dd.svg" alt="catalog" />
+              </span>
+              КАТАЛОГ
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="./catalog.html">Стулья</a></li>
+              <li><a href="./catalog.html">Кресла</a></li>
+              <li><a href="./catalog.html">Мягкая мебель</a></li>
+              <li><a href="./catalog.html">Столы</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mx-auto hidden lg:block">
+          <ul class="flex text-[14px] font-[500] mx-[41px] text-[#2E332F]">
+            <li class="mr-[21px] ml-[0px]">
+              <a href="./individual.html">Индивидуальное производство</a>
+            </li>
+            <li class="mx-4 lg:mx-[21px]"><a href="./portfolio.html">Портфолио</a></li>
+            <li class="mx-4 lg:mx-[21px]"><a href="./about.html">О компании</a></li>
+            <li class="ml-[21px] mr-[0px]"><a href="./contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="sm:flex flex-col text-[14px] hidden text-[#2E332F]">
+          <div class="flex lg:mr-[10px]">
+            <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+          <div class="flex mt-[10px]">
+            <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+        </div>
+
+        <div class="sm:flex mb-auto hidden">
+          <a href="./catalog.html" class="mr-[5px]">
+            <img src="./assets/viber.svg" alt="viber" />
+          </a>
+          <a href="./catalog.html" class="mr-[5px]">
+            <img src="./assets/telegram.svg" alt="telegram" />
+          </a>
+          <a href="./catalog.html">
+            <img src="./assets/whatsap.svg" alt="whatsapp" />
+          </a>
+        </div>
+        <!--  -->
+        <!-- Кнопка открытия -->
+        <div id="phone" class="sm:hidden block ml-auto mr-[16px] cursor-pointer">
+          <img src="./assets/phone-alt.svg" alt="phone" />
+        </div>
+
+        <!-- Меню контактов -->
+        <div
+          id="contactMenu"
+          class="hidden absolute top-full left-0 right-0 z-50 bg-white shadow-lg border border-gray-200 py-[44px]"
+        >
+          <div
+            class="max-w-[1240px] mx-auto px-[20px] py-4 flex flex-col items-center justify-center"
+          >
+            <div class="mb-4">
+              <a href="tel:+375447602900" class="text-lg font-semibold block text-[#2E332F]">+375(44) 760 29 00</a>
+              <div class="flex gap-2 mt-2 justify-center">
+                <a href="./catalog.html"><img src="./assets/viber.svg" alt="Viber" class="w-6 h-6" /></a>
+                <a href="#"><img src="./assets/telegram.svg" alt="Telegram" class="w-6 h-6" /></a>
+                <a href="#"><img src="./assets/whatsap.svg" alt="WhatsApp" class="w-6 h-6" /></a>
+              </div>
+            </div>
+            <div>
+              <a href="tel:+375297602900" class="text-lg font-semibold block text-[#2E332F]">+375(29) 760 29 00</a>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- Кнопка бургер -->
+        <div id="burger" class="sm:hidden block cursor-pointer">
+          <img id="burgerIcon" src="./assets/burger.svg" alt="menu" class="w-[36px]" />
+          <img id="closeIcon" src="./assets/close.svg" alt="close" class="w-[36px] hidden" />
+        </div>
+
+        <!-- Меню бургер -->
+        <div
+          id="burgerMenu"
+          class="hidden absolute top-full left-0 right-0 z-50 bg-white shadow-lg border border-gray-200"
+        >
+          <div class="max-w-[1240px] mx-auto px-[20px] py-4">
+            <nav
+              class="flex flex-col justify-center items-center gap-4 text-lg font-medium py-[44px] text-center text-[#2E332F]"
+            >
+              <a href="#">Каталог</a>
+              <a href="./individual.html">Индивидуальное производство</a>
+              <a href="./portfolio.html">Портфолио</a>
+              <a href="./about.html">О компании</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1200px] mx-auto px-[10px] sm:px-0 py-[40px]">
+      <h1 class="text-[32px] font-bold text-[#2E332F] text-center mb-[30px]">Самба</h1>
+
+      <div class="bg-white shadow-[0_0_15px_rgba(0,0,0,0.05)] p-[20px] sm:p-[40px] rounded-[4px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[40px]">
+          <!-- Left Column: Gallery -->
+          <div>
+            <div
+              class="border border-[#EAEAEA] p-4 mb-4 flex items-center justify-center h-[400px]"
+            >
+              <img
+                id="main-image"
+                src="./assets/chair.png"
+                alt="Самба"
+                class="max-h-full object-contain"
+              />
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+              <div
+                class="thumbnail border border-[#1D77EE] p-2 cursor-pointer h-[80px] flex items-center justify-center"
+                onclick="changeImage(this, './assets/chair.png')"
+              >
+                <img src="./assets/chair.png" alt="thumb" class="max-h-full object-contain" />
+              </div>
+              <div
+                class="thumbnail border border-[#EAEAEA] p-2 cursor-pointer h-[80px] flex items-center justify-center hover:border-[#1D77EE]"
+                onclick="changeImage(this, './assets/armchair.png')"
+              >
+                <img src="./assets/armchair.png" alt="thumb" class="max-h-full object-contain" />
+              </div>
+              <div
+                class="thumbnail border border-[#EAEAEA] p-2 cursor-pointer h-[80px] flex items-center justify-center hover:border-[#1D77EE]"
+                onclick="changeImage(this, './assets/sofa.png')"
+              >
+                <img src="./assets/sofa.png" alt="thumb" class="max-h-full object-contain" />
+              </div>
+              <div
+                class="thumbnail border border-[#EAEAEA] p-2 cursor-pointer h-[80px] flex items-center justify-center hover:border-[#1D77EE]"
+                onclick="changeImage(this, './assets/table.png')"
+              >
+                <img src="./assets/table.png" alt="thumb" class="max-h-full object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Product Info -->
+          <div>
+            <p class="text-[14px] mb-[20px]">Код товара: 132323</p>
+
+            <h3 class="text-[18px] font-bold text-[#2E332F] mb-[15px]">Коротко о товаре</h3>
+
+            <div class="space-y-[10px] mb-[20px] text-[14px] sm:text-[16px]">
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Количество в коробке, шт.</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">1000</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Цена указана</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">без НДС</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Производитель</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">ООО "МИСТЕРИЯ"</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Импортёр</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">ООО "ПСПфабрик"</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Тип</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">Гофрированные</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Цвет</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">Ассорти</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Размер</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">5 мм</span>
+              </div>
+            </div>
+
+            <a href="#" class="text-[#1D77EE] text-[14px] mb-[30px] inline-block hover:underline"
+              >Все характеристики</a
+            >
+
+            <h3 class="text-[18px] font-bold text-[#2E332F] mb-[15px]">Цветовая палитра</h3>
+
+            <div class="flex flex-wrap gap-[20px]">
+              <div class="text-center">
+                <div
+                  class="w-[50px] h-[50px] bg-[#D9D9D9] mb-2 rounded-[2px] cursor-pointer border border-transparent hover:border-[#1D77EE]"
+                ></div>
+                <span class="text-[12px]">Серый</span>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-[50px] h-[50px] bg-[#333333] mb-2 rounded-[2px] cursor-pointer border border-transparent hover:border-[#1D77EE]"
+                ></div>
+                <span class="text-[12px]">Темно-серый</span>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-[50px] h-[50px] bg-[#1A1A1A] mb-2 rounded-[2px] cursor-pointer border border-transparent hover:border-[#1D77EE]"
+                ></div>
+                <span class="text-[12px]">Черный</span>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-[50px] h-[50px] bg-[#E31E24] mb-2 rounded-[2px] cursor-pointer border border-transparent hover:border-[#1D77EE]"
+                ></div>
+                <span class="text-[12px]">Красный</span>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-[50px] h-[50px] bg-[#0F5238] mb-2 rounded-[2px] cursor-pointer border border-transparent hover:border-[#1D77EE]"
+                ></div>
+                <span class="text-[12px]">Зеленый</span>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-[50px] h-[50px] bg-[#2B3675] mb-2 rounded-[2px] cursor-pointer border border-transparent hover:border-[#1D77EE]"
+                ></div>
+                <span class="text-[12px]">Синий</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[60px] grid grid-cols-1 lg:grid-cols-2 gap-[40px]">
+          <!-- Characteristics -->
+          <div>
+            <h3 class="text-[18px] font-bold text-[#2E332F] mb-[20px]">Характеристики</h3>
+            <div class="space-y-[10px] text-[14px] sm:text-[16px]">
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Количество в коробке, шт.</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">1000</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Цена указана</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">без НДС</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Производитель</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">ООО "МИСТЕРИЯ"</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Импортёр</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">ООО "ПСПфабрик"</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Тип</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">Гофрированные</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Цвет</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">Ассорти</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="relative z-10 bg-white pr-2">Размер</span>
+                <span class="flex-1 border-b border-dotted border-[#CCCCCC] mx-1"></span>
+                <span class="relative z-10 bg-white pl-2 text-[#2E332F]">5 мм</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div>
+            <h3 class="text-[18px] font-bold text-[#2E332F] mb-[20px]">Описание</h3>
+            <div class="text-[14px] sm:text-[16px] leading-[1.6]">
+              <p>
+                Металлический каркас, черное полимерное покрытие или хром, мягкое сиденье и спинка,
+                обивка ткань или экокожа.
+              </p>
+              <p>Пластиковая накладка на спинке, пластиковые заглушки на ножках.</p>
+              <p>Размеры Ш*Г*В - 535*580*820 мм. Рекомендованная нагрузка - до 120 кг.</p>
+              <p>Страна происхождения товара – Россия. Гарантия – 12 месяцев.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-[#dbd8d6] min-h-[320px] px-[10px] md:px-[20px] mt-[80px]">
+      <div class="flex flex-col md:flex-row max-w-[1240px] mx-auto pt-[44px] justify-between">
+        <div class="flex flex-col mb-[34px] max-w-[252px]">
+          <a class="text-[36px] font-bold mr-[40px] mb-2 md:mb-[20px] text-[#2E332F]" href="#">Logo</a>
+          <p class="text-[14px] font-[100] text-[#2E332F]">
+            Актуальные действующие цены<br />
+            и наличие товара уточняйте<br />
+            у Вашего менеджера
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-[18px] font-bold mb-[20px] text-[#2E332F]">Меню</h3>
+          <div class="flex">
+            <div class="flex-col">
+              <div class="flex justify-between text-[14px] text-[#2E332F]">
+                <div class="flex flex-col max-w-[120px] sm:max-w-full mb-[32px]">
+                  <a class="mb-[16px]" href="./individual.html">Индивидуальное производство</a>
+                  <a href="./portfolio.html">Портфолио</a>
+                </div>
+                <div class="flex flex-col ml-[80px] lg:ml-[60px]">
+                  <a class="mb-[38px] sm:mb-[16px]" href="./about.html">О компании</a>
+                  <a href="./contacts.html">Контакты</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-[18px] font-bold mb-[20px] text-[#2E332F]">Как с нами связаться</h3>
+          <div class="flex text-[14px] text-[#2E332F]">
+            <img class="mr-[10px] mb-[10px]" src="./assets//phone.svg" alt="phone" />
+            <a class="mr-[10px]" href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+            <a class="mr-[10px]" href="#"><img src="./assets/viber.svg" alt="viber" /></a>
+            <a class="mr-[10px]" href="#"><img src="./assets/telegram.svg" alt="telegram" /></a>
+            <a href=""><img src="./assets/whatsap.svg" alt="whatsapp" /></a>
+          </div>
+          <div class="flex text-[14px] text-[#2E332F]">
+            <img class="mr-[10px] mb-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+          <div class="flex text-[14px] text-[#2E332F]">
+            <img class="mr-[10px]" src="./assets/mail.svg" alt="mail" />
+            <a href="mail:fabrikant-by@mail.ru">fabrikant-by@mail.ru</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex max-w-[1240px] mx-auto border-b-1 border-[#C4C4C4] pb-5 sm:pb-2 mt-[32px] sm:mt-0"
+      >
+        <p class="flex max-w-[735px] mr-auto text-[12px] text-[#5E5E5E]">
+          Данный сайт не является интернет-магазином и не осуществляет продажу товара физическим
+          лицам за наличный расчет. Товары и цены указаны для ознакомления, приобретение товара
+          осуществляется на основании выставленного счета-фактуры по безналичному расчету.
+        </p>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row pb-[32px] justify-between text-[12px] text-[#5E5E5E] max-w-[1240px] mx-auto pt-2"
+      >
+        <a href="policy-userdata.html">Политика обработки персональных данных</a>
+        <a href="policy-cookie.html">Политика обработки файлов cookie</a>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script>
+      function changeImage(element, src) {
+        // Update main image
+        document.getElementById('main-image').src = src;
+
+        // Update active state
+        document.querySelectorAll('.thumbnail').forEach((thumb) => {
+          thumb.classList.remove('border-[#1D77EE]');
+          thumb.classList.add('border-[#EAEAEA]');
+        });
+
+        element.classList.remove('border-[#EAEAEA]');
+        element.classList.add('border-[#1D77EE]');
+      }
+    </script>
+  </body>
+</html>

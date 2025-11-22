@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Политика в отношении обработки файлов cookie - BDV</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="text-[#656565] text-[16px] font-['Open_Sans'] flex flex-col min-h-screen">
+    <header id="menu" class="bg-[#F7F4F4] h-[52px] sm:h-[84px] py-[17px] relative">
+      <div
+        class="flex items-center justify-between max-w-[1240px] px-[10px] sm:px-[20px] mx-auto w-full h-full"
+      >
+        <a class="text-[22px] sm:text-[36px] font-bold mr-[40px] text-[#2E332F]" href="index.html">Logo</a>
+
+        <div class="hidden sm:block">
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <span class="menu-icon">
+                <img src="./assets/dd.svg" alt="catalog" />
+              </span>
+              КАТАЛОГ
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="./catalog.html">Стулья</a></li>
+              <li><a href="./catalog.html">Кресла</a></li>
+              <li><a href="./catalog.html">Мягкая мебель</a></li>
+              <li><a href="./catalog.html">Столы</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mx-auto hidden lg:block">
+          <ul class="flex text-[14px] font-[500] mx-[41px] text-[#2E332F]">
+            <li class="mr-[21px] ml-[0px]">
+              <a href="./individual.html">Индивидуальное производство</a>
+            </li>
+            <li class="mx-4 lg:mx-[21px]"><a href="./portfolio.html">Портфолио</a></li>
+            <li class="mx-4 lg:mx-[21px]"><a href="./about.html">О компании</a></li>
+            <li class="ml-[21px] mr-[0px]"><a href="./contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="sm:flex flex-col text-[14px] hidden text-[#2E332F]">
+          <div class="flex lg:mr-[10px]">
+            <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+          <div class="flex mt-[10px]">
+            <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+        </div>
+
+        <div class="sm:flex mb-auto hidden">
+          <a href="./catalog.html" class="mr-[5px]">
+            <img src="./assets/viber.svg" alt="viber" />
+          </a>
+          <a href="./catalog.html" class="mr-[5px]">
+            <img src="./assets/telegram.svg" alt="telegram" />
+          </a>
+          <a href="./catalog.html">
+            <img src="./assets/whatsap.svg" alt="whatsapp" />
+          </a>
+        </div>
+        <!--  -->
+        <!-- Кнопка открытия -->
+        <div id="phone" class="sm:hidden block ml-auto mr-[16px] cursor-pointer">
+          <img src="./assets/phone-alt.svg" alt="phone" />
+        </div>
+
+        <!-- Меню контактов -->
+        <div
+          id="contactMenu"
+          class="hidden absolute top-full left-0 right-0 z-50 bg-white shadow-lg border border-gray-200 py-[44px]"
+        >
+          <div
+            class="max-w-[1240px] mx-auto px-[20px] py-4 flex flex-col items-center justify-center"
+          >
+            <div class="mb-4">
+              <a href="tel:+375447602900" class="text-lg font-semibold block text-[#2E332F]">+375(44) 760 29 00</a>
+              <div class="flex gap-2 mt-2 justify-center">
+                <a href="./catalog.html"><img src="./assets/viber.svg" alt="Viber" class="w-6 h-6" /></a>
+                <a href="#"><img src="./assets/telegram.svg" alt="Telegram" class="w-6 h-6" /></a>
+                <a href="#"><img src="./assets/whatsap.svg" alt="WhatsApp" class="w-6 h-6" /></a>
+              </div>
+            </div>
+            <div>
+              <a href="tel:+375297602900" class="text-lg font-semibold block text-[#2E332F]">+375(29) 760 29 00</a>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- Кнопка бургер -->
+        <div id="burger" class="sm:hidden block cursor-pointer">
+          <img id="burgerIcon" src="./assets/burger.svg" alt="menu" class="w-[36px]" />
+          <img id="closeIcon" src="./assets/close.svg" alt="close" class="w-[36px] hidden" />
+        </div>
+
+        <!-- Меню бургер -->
+        <div
+          id="burgerMenu"
+          class="hidden absolute top-full left-0 right-0 z-50 bg-white shadow-lg border border-gray-200"
+        >
+          <div class="max-w-[1240px] mx-auto px-[20px] py-4">
+            <nav
+              class="flex flex-col justify-center items-center gap-4 text-lg font-medium py-[44px] text-center text-[#2E332F]"
+            >
+              <a href="#">Каталог</a>
+              <a href="./individual.html">Индивидуальное производство</a>
+              <a href="./portfolio.html">Портфолио</a>
+              <a href="./about.html">О компании</a>
+              <a href="./contacts.html">Контакты</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1200px] mx-auto px-[10px] sm:px-[20px] py-[20px]">
+      <!-- Breadcrumbs -->
+      <div class="text-[12px] text-[#999999] mb-[30px]">
+        <a href="index.html" class="hover:text-[#1D77EE]">Главная</a>
+        <span class="mx-1">></span>
+        <span class="text-[#656565]">Политика в отношении обработки файлов cookie</span>
+      </div>
+
+      <h1 class="text-[24px] sm:text-[32px] font-bold text-[#2E332F] text-center mb-[60px]">
+        Политика в отношении обработки файлов cookie
+      </h1>
+
+      <div class="space-y-[40px] text-[14px] sm:text-[16px]">
+        <!-- Section 1 -->
+        <section>
+          <h2 class="text-[16px] sm:text-[18px] font-bold text-[#2E332F] mb-[10px]">
+            1. Файлы cookie (далее – cookie)
+          </h2>
+          <p class="mb-[10px]">
+            являются текстовыми файлами, которые сохраняются в браузере компьютера или мобильного
+            устройства пользователя при посещении официального интернет-сайта [название компании]
+            (далее – сайт) и отражают совершенные пользователем действия. Они служат для
+            идентификации браузера при повторном посещении сайта и используются для различных целей,
+            например, для запоминания пользовательских настроек. Кроме того, они могут
+            использоваться для сбора статистических данных о взаимодействии пользователей с сайтом и
+            для улучшения его функциональности.
+          </p>
+          <p class="mb-[10px]">
+            Файлы cookie не представляют собой угрозы для устройства пользователя, поскольку
+            являются текстом, а не запускаемыми программами.
+          </p>
+          <p class="mb-[10px]">
+            Пользователи имеют возможность управлять настройками файлов cookie в своем браузере,
+            включая блокировку или удаление уже существующих файлов.
+          </p>
+          <p class="mb-[10px]">
+            <span class="font-bold text-[#2E332F]">Цель обработки cookie</span> – хранение
+            информации о пользователе, которая может быть использована для улучшения его опыта
+            взаимодействия с сайтом. Cookie могут содержать различные данные, такие как предпочтения
+            пользователя, историю посещения сайта так далее.
+          </p>
+          <p class="mb-[10px]">
+            В зависимости от цели обработки cookie могут использоваться для
+            <span class="font-bold text-[#2E332F]">следующих задач</span>:
+          </p>
+          <ul class="list-disc pl-[20px] space-y-[5px]">
+            <li>хранение настроек пользователя</li>
+            <li>сбор статистических данных в обобщенном виде</li>
+            <li>улучшение работы сайта и повышение удобства его использования</li>
+          </ul>
+          <p class="mt-[10px]">
+            Сайт <span class="font-bold text-[#2E332F]">не использует</span> файлы cookie для
+            идентификации пользователей.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+          <h2 class="text-[16px] sm:text-[18px] font-bold text-[#2E332F] mb-[10px]">
+            2. На сайте обрабатываются следующие типы cookie:
+          </h2>
+          <p class="mb-[10px]">
+            <span class="font-bold text-[#2E332F]">Обязательные</span> – необходимы для работы сайта
+            и используются для различных целей, таких как сохранение предпочтений пользователей, а
+            также для обеспечения безопасности сайта.
+          </p>
+          <p class="mb-[10px]">
+            <span class="font-bold text-[#2E332F]">Функциональные</span> – используются для
+            сохранения информации о предпочтениях пользователя, таких как язык интерфейса или
+            выбранный регион. Они позволяют сайту автоматически адаптироваться к этим параметрам при
+            повторных посещениях и обеспечивают работу полезных функций, таких как использование
+            функций Яндекс Карт, запоминание настроек посетителей сайта и улучшение взаимодействия
+            пользователя со страницами сайта. Этот тип файлов cookie является необходимым для
+            нормальной работы сайта и его функциональности.
+          </p>
+          <p>
+            <span class="font-bold text-[#2E332F]">Целевые и аналитические</span> – помогают
+            анализировать популярность сайта, узнать, какие страницы наиболее посещаемы, сколько
+            времени пользователи проводят на сайте, как они перемещаются по сайту и так далее.
+            Полученная информация может использоваться для улучшения пользовательского опыта и
+            увеличения эффективности веб-сайта.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+          <h2 class="text-[16px] sm:text-[18px] font-bold text-[#2E332F] mb-[10px]">
+            3. По типу хранения cookie могут быть разделены на две категории:
+          </h2>
+          <p class="mb-[10px]">
+            <span class="font-bold text-[#2E332F]">Сессионные cookie</span>, сохраняются в браузере
+            пользователя только на время сеанса, то есть до тех пор, пока пользователь не закроет
+            браузер или не выйдет из системы. Эти cookie используются для сохранения информации о
+            состоянии пользователя и обеспечения безопасности сеанса.
+          </p>
+          <p class="mb-[10px]">
+            <span class="font-bold text-[#2E332F]">Постоянные cookie</span>, сохраняются на
+            длительное время в браузере пользователя и могут использоваться для хранения информации,
+            которая будет доступна при следующем визите на сайт. Такие cookie могут содержать
+            информацию о предпочтениях пользователя, например, язык интерфейса, данные авторизации,
+            а также предоставлять возможность отслеживания поведения пользователя в Интернете.
+          </p>
+          <p>
+            Со списком файлов cookie и сроком их хранения пользователь может ознакомиться в
+            Приложении к настоящей Политике.
+          </p>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+          <h2 class="text-[16px] sm:text-[18px] font-bold text-[#2E332F] mb-[10px]">
+            4. Пользователи могут «Принять все» или «Отклонить все» обрабатываемые на сайте cookie.
+          </h2>
+          <p class="mb-[10px]">
+            Пользователь сайта может отказаться от использования файлов cookie, полученных из
+            устройства.
+          </p>
+          <p>
+            При этом корректная работа сайта возможна только в случае использования функциональных
+            cookie. Отключение статистических cookie не позволяет определять предпочтения
+            пользователей сайта, в том числе наиболее и наименее популярные страницы и принимать
+            меры по совершенствованию работы сайта исходя из предпочтений пользователей.
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section>
+          <h2 class="text-[16px] sm:text-[18px] font-bold text-[#2E332F] mb-[10px]">
+            5. Помимо настроек cookie на сайте пользователи могут принять или отклонить сбор всех
+            или некоторых cookie в настройках своего браузера.
+          </h2>
+          <p class="mb-[10px]">
+            Пользователи могут использовать режим "инкогнито" в браузерах, чтобы ограничить объем
+            информации, сохраняемой на их компьютере, и автоматически удалять сессионные cookie.
+            Кроме того, если пользователь желает удалить ранее сохраненные cookie, то он может
+            выбрать соответствующую опцию в истории браузера или произвести ручную очистку
+            устройства от уже сохраненных файлов cookie, а также отключить сбор файлов cookie в
+            настройках браузера.
+          </p>
+          <p class="mb-[10px]">
+            Важно понимать, что если пользователь выберет опцию отключения файлов cookie, то сайт не
+            сможет гарантировать ему полноценную и эффективную работу всех функциональных
+            возможностей сайта.
+          </p>
+          <p class="mb-[10px]">
+            Вы можете узнать больше о параметрах управления файлами cookie, перейдя по внешним
+            ссылкам, которые ведут на сайты основных браузеров. Там вы найдете подробную информацию
+            об управлении файлами cookie в каждом конкретном браузере:
+          </p>
+          <ul class="list-disc pl-[20px] space-y-[5px]">
+            <li>Firefox</li>
+            <li>Google Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+            <li>Internet Explorer</li>
+            <li>Яндекс</li>
+            <li>Microsoft Edge</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-[#dbd8d6] min-h-[320px] px-[10px] md:px-[20px] mt-[80px]">
+      <div class="flex flex-col md:flex-row max-w-[1240px] mx-auto pt-[44px] justify-between">
+        <div class="flex flex-col mb-[34px] max-w-[252px]">
+          <a class="text-[36px] font-bold mr-[40px] mb-2 md:mb-[20px] text-[#2E332F]" href="#">Logo</a>
+          <p class="text-[14px] font-[100] text-[#2E332F]">
+            Актуальные действующие цены<br />
+            и наличие товара уточняйте<br />
+            у Вашего менеджера
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-[18px] font-bold mb-[20px] text-[#2E332F]">Меню</h3>
+          <div class="flex">
+            <div class="flex-col">
+              <div class="flex justify-between text-[14px] text-[#2E332F]">
+                <div class="flex flex-col max-w-[120px] sm:max-w-full mb-[32px]">
+                  <a class="mb-[16px]" href="./individual.html">Индивидуальное производство</a>
+                  <a href="./portfolio.html">Портфолио</a>
+                </div>
+                <div class="flex flex-col ml-[80px] lg:ml-[60px]">
+                  <a class="mb-[38px] sm:mb-[16px]" href="./about.html">О компании</a>
+                  <a href="./contacts.html">Контакты</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-[18px] font-bold mb-[20px] text-[#2E332F]">Как с нами связаться</h3>
+          <div class="flex text-[14px] text-[#2E332F]">
+            <img class="mr-[10px] mb-[10px]" src="./assets//phone.svg" alt="phone" />
+            <a class="mr-[10px]" href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+            <a class="mr-[10px]" href="#"><img src="./assets/viber.svg" alt="viber" /></a>
+            <a class="mr-[10px]" href="#"><img src="./assets/telegram.svg" alt="telegram" /></a>
+            <a href=""><img src="./assets/whatsap.svg" alt="whatsapp" /></a>
+          </div>
+          <div class="flex text-[14px] text-[#2E332F]">
+            <img class="mr-[10px] mb-[10px]" src="./assets/phone.svg" alt="phone" />
+            <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
+          </div>
+          <div class="flex text-[14px] text-[#2E332F]">
+            <img class="mr-[10px]" src="./assets/mail.svg" alt="mail" />
+            <a href="mail:fabrikant-by@mail.ru">fabrikant-by@mail.ru</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex max-w-[1240px] mx-auto border-b-1 border-[#C4C4C4] pb-5 sm:pb-2 mt-[32px] sm:mt-0"
+      >
+        <p class="flex max-w-[735px] mr-auto text-[12px] text-[#5E5E5E]">
+          Данный сайт не является интернет-магазином и не осуществляет продажу товара физическим
+          лицам за наличный расчет. Товары и цены указаны для ознакомления, приобретение товара
+          осуществляется на основании выставленного счета-фактуры по безналичному расчету.
+        </p>
+      </div>
+      <div
+        class="flex flex-col sm:flex-row pb-[32px] justify-between text-[12px] text-[#5E5E5E] max-w-[1240px] mx-auto pt-2"
+      >
+        <a href="policy-userdata.html">Политика обработки персональных данных</a>
+        <a href="policy-cookie.html">Политика обработки файлов cookie</a>
+      </div>
+    </footer>
+
+    <div class="fixed bottom-2 right-2 sm:relative sm:w-full sm:mb-[80px] hidden sm:block">
+      <div
+        class="flex items-center justify-center mx-auto w-[56px] h-[56px] border-1 border-[#D5D8D9] rounded-[100px] cursor-pointer"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      >
+        <img src="./assets/arraow-up.svg" alt="up" />
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

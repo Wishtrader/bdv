@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BDV</title>
+    <title>Контакты - BDV</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link href="./css/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f7f4f4;
+      }
+    </style>
   </head>
-  <body>
+  <body class="text-[#656565] text-[16px] font-['Open_Sans']">
     <header id="menu" class="bg-[#F7F4F4] h-[52px] sm:h-[84px] py-[17px] relative">
       <div
         class="flex items-center justify-between max-w-[1240px] px-[10px] sm:px-[20px] mx-auto w-full h-full"
       >
-        <a class="text-[22px] sm:text-[36px] font-bold mr-[40px]" href="./index.html">Logo</a>
+        <a class="text-[22px] sm:text-[36px] font-bold mr-[40px] text-[#2E332F]" href="index.html">Logo</a>
 
         <div class="hidden sm:block">
           <div class="dropdown">
@@ -27,24 +32,26 @@
               КАТАЛОГ
             </button>
             <ul class="dropdown-menu">
-              <li><a href="#">Стулья</a></li>
-              <li><a href="#">Кресла</a></li>
-              <li><a href="#">Мягкая мебель</a></li>
-              <li><a href="#">Столы</a></li>
+              <li><a href="./catalog.html">Стулья</a></li>
+              <li><a href="./catalog.html">Кресла</a></li>
+              <li><a href="./catalog.html">Мягкая мебель</a></li>
+              <li><a href="./catalog.html">Столы</a></li>
             </ul>
           </div>
         </div>
 
         <div class="mx-auto hidden lg:block">
-          <ul class="flex text-[14px] font-[500] mx-[41px]">
-            <li class="mr-[21px] ml-[0px]"><a href="#">Индивидуальное производство</a></li>
-            <li class="mx-4 lg:mx-[21px]"><a href="individual.html">Портфолио</a></li>
-            <li class="mx-4 lg:mx-[21px]"><a href="index.html">О компании</a></li>
-            <li class="ml-[21px] mr-[0px]"><a href="#">Контакты</a></li>
+          <ul class="flex text-[14px] font-[500] mx-[41px] text-[#2E332F]">
+            <li class="mr-[21px] ml-[0px]">
+              <a href="./individual.html">Индивидуальное производство</a>
+            </li>
+            <li class="mx-4 lg:mx-[21px]"><a href="./portfolio.html">Портфолио</a></li>
+            <li class="mx-4 lg:mx-[21px]"><a href="./about.html">О компании</a></li>
+            <li class="ml-[21px] mr-[0px]"><a href="./contacts.html">Контакты</a></li>
           </ul>
         </div>
 
-        <div class="sm:flex flex-col text-[14px] hidden">
+        <div class="sm:flex flex-col text-[14px] hidden text-[#2E332F]">
           <div class="flex lg:mr-[10px]">
             <img class="lg:mr-[10px]" src="./assets/phone.svg" alt="phone" />
             <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
@@ -56,13 +63,13 @@
         </div>
 
         <div class="sm:flex mb-auto hidden">
-          <a href="#" class="mr-[5px]">
+          <a href="./catalog.html" class="mr-[5px]">
             <img src="./assets/viber.svg" alt="viber" />
           </a>
-          <a href="#" class="mr-[5px]">
+          <a href="./catalog.html" class="mr-[5px]">
             <img src="./assets/telegram.svg" alt="telegram" />
           </a>
-          <a href="#">
+          <a href="./catalog.html">
             <img src="./assets/whatsap.svg" alt="whatsapp" />
           </a>
         </div>
@@ -81,15 +88,15 @@
             class="max-w-[1240px] mx-auto px-[20px] py-4 flex flex-col items-center justify-center"
           >
             <div class="mb-4">
-              <a href="tel:+375447602900" class="text-lg font-semibold block">+375(44) 760 29 00</a>
+              <a href="tel:+375447602900" class="text-lg font-semibold block text-[#2E332F]">+375(44) 760 29 00</a>
               <div class="flex gap-2 mt-2 justify-center">
-                <a href="#"><img src="./assets/viber.svg" alt="Viber" class="w-6 h-6" /></a>
+                <a href="./catalog.html"><img src="./assets/viber.svg" alt="Viber" class="w-6 h-6" /></a>
                 <a href="#"><img src="./assets/telegram.svg" alt="Telegram" class="w-6 h-6" /></a>
                 <a href="#"><img src="./assets/whatsap.svg" alt="WhatsApp" class="w-6 h-6" /></a>
               </div>
             </div>
             <div>
-              <a href="tel:+375297602900" class="text-lg font-semibold block">+375(29) 760 29 00</a>
+              <a href="tel:+375297602900" class="text-lg font-semibold block text-[#2E332F]">+375(29) 760 29 00</a>
             </div>
           </div>
         </div>
@@ -107,74 +114,96 @@
         >
           <div class="max-w-[1240px] mx-auto px-[20px] py-4">
             <nav
-              class="flex flex-col justify-center items-center gap-4 text-lg font-medium py-[44px] text-center"
+              class="flex flex-col justify-center items-center gap-4 text-lg font-medium py-[44px] text-center text-[#2E332F]"
             >
               <a href="#">Каталог</a>
-              <a href="#">Индивидуальное производство</a>
-              <a href="individual.html">Портфолио</a>
-              <a href="index.html">О компании</a>
-              <a href="#">Контакты</a>
+              <a href="./individual.html">Индивидуальное производство</a>
+              <a href="./portfolio.html">Портфолио</a>
+              <a href="./about.html">О компании</a>
+              <a href="./contacts.html">Контакты</a>
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <main
-      id="catalog"
-      class="max-w-[1200px] bg-[#FEFDFC] mt-[12px] px-2 sm:mt-[24px] mx-auto text-[#2E332F] transition duration-300"
-    >
-      <div class="text-[#656565] text-[14px]">
-        <a href="/">Главная</a> >> <a href="individual.html">Портфолио</a>
-      </div>
-      <h1
-        class="sm:text-[36px]/10 text-[23px] font-bold text-center my-4 sm:mt-[56px] sm:mb-[32px]"
-      >
-        Портфолио
-      </h1>
-      <section
-        class="grid gap-[8px] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-4"
-      ></section>
-      <section class="max-w-[1260px] sm:px-[10px] mx-auto sm:pr-[0px]">
-        <div class="grid gap-[8px] sm:gap-4 grid-cols-1 sm:grid-cols-2">
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-          <a href="#" class="hover:border-2 hover:border-white"
-            ><img src="./assets/folio.png" alt="project"
-          /></a>
-        </div>
-      </section>
 
+    <main class="max-w-[1200px] mx-auto px-[10px] sm:px-[20px] py-[20px]">
+      <!-- Breadcrumbs -->
+      <div class="text-[12px] text-[#999999] mb-[30px]">
+        <a href="index.html" class="hover:text-[#1D77EE]">Главная</a>
+        <span class="mx-1">></span>
+        <span class="text-[#656565]">Контакты</span>
+      </div>
+
+      <h1 class="text-[32px] font-bold text-[#2E332F] text-center mb-[60px]">Контакты</h1>
+
+      <div class="flex flex-col lg:flex-row gap-[40px] mb-[80px]">
+        <!-- Contact Info -->
+        <div class="w-full lg:w-1/3 space-y-[30px]">
+          <div>
+            <h3 class="text-[18px] font-bold text-[#1D77EE] mb-[10px]">Телефоны:</h3>
+            <div class="flex items-center mb-[5px]">
+              <span class="text-[#2E332F] font-semibold mr-2">+375(44) 760 29 00</span>
+              <div class="flex gap-1">
+                <a href="#"
+                  ><img src="./assets/viber.svg" alt="viber" class="w-[16px] h-[16px]"
+                /></a>
+                <a href="#"
+                  ><img src="./assets/telegram.svg" alt="telegram" class="w-[16px] h-[16px]"
+                /></a>
+                <a href="#"
+                  ><img src="./assets/whatsap.svg" alt="whatsapp" class="w-[16px] h-[16px]"
+                /></a>
+              </div>
+            </div>
+            <p class="text-[#2E332F] font-semibold">+375(29) 760 29 00</p>
+          </div>
+
+          <div>
+            <h3 class="text-[18px] font-bold text-[#1D77EE] mb-[10px]">E-mail:</h3>
+            <a
+              href="mailto:fabrikant-by@mail.ru"
+              class="text-[#2E332F] font-semibold hover:text-[#1D77EE]"
+              >fabrikant-by@mail.ru</a
+            >
+          </div>
+
+          <div>
+            <h3 class="text-[18px] font-bold text-[#1D77EE] mb-[10px]">Юридический адрес:</h3>
+            <p class="text-[#2E332F] font-semibold">
+              Республика Беларусь, 220114, г.Минск,<br />ул.К.Туровского, д.16, пом.125
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-[18px] font-bold text-[#1D77EE] mb-[10px]">Почтовый адрес:</h3>
+            <p class="text-[#2E332F] font-semibold">
+              Республика Беларусь, 220138, г.Минск,<br />ул.Связистов, д.9, кв.102
+            </p>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="w-full lg:w-2/3 h-[400px] bg-[#EAEAEA] rounded-[8px] overflow-hidden relative">
+          <!-- Placeholder for map. In production, replace with Google Maps or Yandex Maps iframe -->
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=27.648588%2C53.931429&z=14"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen="true"
+            style="position: relative"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Need Help Section (Reused) -->
       <section
-        class="mt-[70px] sm:mb-[112px] pr-[10px] sm:pr-0 pl-[10px] sm:pl-[40px] text-[#2E332F] relative flex sm:flex-row flex-col items-center justify-between max-w-[1240px] mx-auto bg-linear-to-br from-[#F6F4F1] to-[#E8E4E0] rounded-[8px]"
+        class="relative flex sm:flex-row flex-col items-center justify-between w-full mx-auto bg-linear-to-br from-[#F6F4F1] to-[#E8E4E0] rounded-[8px] overflow-hidden"
       >
-        <div class="w-full lg:max-w-[430px]">
-          <h2 class="text-[26px] sm:text-[32px] font-bold mb-4 mt-[60px]">Нужна помощь?</h2>
-          <p class="text-[14px] sm:text-[16px] mb-[32px] font-extralight">
+        <div class="w-full lg:max-w-[430px] pl-[20px] sm:pl-[60px] py-[40px] z-10">
+          <h2 class="text-[26px] sm:text-[32px] font-bold mb-4 text-[#2E332F]">Нужна помощь?</h2>
+          <p class="text-[14px] sm:text-[16px] mb-[32px] font-extralight text-[#2E332F]">
             Оставьте ваши контактные данные. Проконсультируем по всем интересующим вопросам и
             поможем подобрать мебель.
           </p>
@@ -210,70 +239,67 @@
             </div>
 
             <button
-              class="relative z-2 w-full sm:w-auto mr-auto mt-2 mb-[50px] bg-linear-to-br from-[#C9F4FB] to-[#1D77EE] py-[13px] px-[55px] rounded-[8px] text-white uppercase font-bold"
+              class="relative z-2 w-full sm:w-auto mr-auto mt-2 bg-linear-to-br from-[#C9F4FB] to-[#1D77EE] py-[13px] px-[55px] rounded-[8px] text-white uppercase font-bold hover:opacity-90 transition shadow-[0_4px_10px_rgba(29,119,238,0.3)]"
             >
               ОТПРАВИТЬ
             </button>
           </form>
         </div>
-        <div
-          class="flex-shrink-0 w-full md:w-[684px] sm:-mr-[16px] -mt-[120px] sm:-mt-[26px] sm:-mb-[36px]"
-        >
+        <div class="flex-shrink-0 w-full md:w-[60%] h-full absolute right-0 top-0 bottom-0">
           <img
-            src="/assets/chair2.png"
-            alt="Кресло и стол"
-            class="hidden sm:block w-full h-auto object-cover"
+            src="./assets/chair2.png"
+            alt="Кресло"
+            class="w-full h-full object-cover object-right"
           />
-          <img
-            src="/assets/bg2-mob.png"
-            alt="Кресло и стол"
-            class="sm:hidden w-full h-auto object-cover"
-          />
+          <!-- Gradient Overlay for smooth transition if needed, or rely on CSS background -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#F6F4F1] via-transparent to-transparent sm:via-[#F6F4F1]/50"
+          ></div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[#dbd8d6] min-h-[320px] px-[10px] md:px-[20px] relative">
+    <footer class="bg-[#dbd8d6] min-h-[320px] px-[10px] md:px-[20px] mt-[80px]">
       <div class="flex flex-col md:flex-row max-w-[1240px] mx-auto pt-[44px] justify-between">
         <div class="flex flex-col mb-[34px] max-w-[252px]">
-          <a class="text-[36px] font-bold mr-[40px] mb-2 md:mb-[20px]" href="#">Logo</a>
-          <p class="text-[14px] font-[100]">
+          <a class="text-[36px] font-bold mr-[40px] mb-2 md:mb-[20px] text-[#2E332F]" href="#">Logo</a>
+          <p class="text-[14px] font-[100] text-[#2E332F]">
             Актуальные действующие цены<br />
             и наличие товара уточняйте<br />
             у Вашего менеджера
           </p>
         </div>
         <div class="flex flex-col">
-          <h3 class="text-[18px] font-bold mb-[20px]">Меню</h3>
+          <h3 class="text-[18px] font-bold mb-[20px] text-[#2E332F]">Меню</h3>
           <div class="flex">
             <div class="flex-col">
               <div class="flex justify-between text-[14px] text-[#2E332F]">
                 <div class="flex flex-col max-w-[120px] sm:max-w-full mb-[32px]">
-                  <a class="mb-[16px]" href="#">Индивидуальное производство</a>
-                  <a href="individual.html">Портфолио</a>
+                  <a class="mb-[16px]" href="./individual.html">Индивидуальное производство</a>
+                  <a href="./portfolio.html">Портфолио</a>
                 </div>
                 <div class="flex flex-col ml-[80px] lg:ml-[60px]">
-                  <a class="mb-[38px] sm:mb-[16px]" href="index.html">О компании</a>
-                  <a href="#">Контакты</a>
+                  <a class="mb-[38px] sm:mb-[16px]" href="./about.html">О компании</a>
+                  <a href="./contacts.html">Контакты</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="flex flex-col">
-          <h3 class="text-[18px] font-bold mb-[20px]">Как с нами связаться</h3>
-          <div class="flex text-[14px]">
+          <h3 class="text-[18px] font-bold mb-[20px] text-[#2E332F]">Как с нами связаться</h3>
+          <div class="flex text-[14px] text-[#2E332F]">
             <img class="mr-[10px] mb-[10px]" src="./assets//phone.svg" alt="phone" />
             <a class="mr-[10px]" href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
             <a class="mr-[10px]" href="#"><img src="./assets/viber.svg" alt="viber" /></a>
             <a class="mr-[10px]" href="#"><img src="./assets/telegram.svg" alt="telegram" /></a>
             <a href=""><img src="./assets/whatsap.svg" alt="whatsapp" /></a>
           </div>
-          <div class="flex text-[14px]">
+          <div class="flex text-[14px] text-[#2E332F]">
             <img class="mr-[10px] mb-[10px]" src="./assets/phone.svg" alt="phone" />
             <a href="tel:+375(44) 760 29 00">+375(44) 760 29 00</a>
           </div>
-          <div class="flex text-[14px]">
+          <div class="flex text-[14px] text-[#2E332F]">
             <img class="mr-[10px]" src="./assets/mail.svg" alt="mail" />
             <a href="mail:fabrikant-by@mail.ru">fabrikant-by@mail.ru</a>
           </div>
@@ -292,16 +318,18 @@
         class="flex flex-col sm:flex-row pb-[32px] justify-between text-[12px] text-[#5E5E5E] max-w-[1240px] mx-auto pt-2"
       >
         <a href="policy-userdata.html">Политика обработки персональных данных</a>
-        <a href="#">Политика обработки файлов cookie</a>
-      </div>
-      <div
-        class="flex absolute right-2 top-2 items-center justify-center mx-auto bg-[#FFFFFF] w-[56px] h-[56px] border-1 border-[#D5D8D9] rounded-[100px]"
-      >
-        <a href="#menu">
-          <img src="./assets/arraow-up.svg" alt="up" />
-        </a>
+        <a href="policy-cookie.html">Политика обработки файлов cookie</a>
       </div>
     </footer>
+
+    <div class="fixed bottom-2 right-2 sm:relative sm:w-full sm:mb-[80px] hidden sm:block">
+      <div
+        class="flex items-center justify-center mx-auto w-[56px] h-[56px] border-1 border-[#D5D8D9] rounded-[100px] cursor-pointer"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      >
+        <img src="./assets/arraow-up.svg" alt="up" />
+      </div>
+    </div>
 
     <script src="./js/main.js"></script>
   </body>
